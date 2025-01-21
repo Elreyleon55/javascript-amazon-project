@@ -1,4 +1,4 @@
-console.log("hello");
+import { cart } from "../data/cart.js";
 
 let productHTML = "";
 
