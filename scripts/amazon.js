@@ -1,4 +1,4 @@
-import { cart, addToCart } from "../data/cart.js";
+import { cart, addToCart, saveToStorage } from "../data/cart.js";
 import { products } from "../data/products.js";
 import { formatCurreny } from "./utils/money.js";
 
@@ -78,6 +78,7 @@ document.querySelectorAll(".js-add-to-cart").forEach((button) => {
     addToCart(productId);
 
     updateCartQuantity();
+    saveToStorage();
   });
 });
 
