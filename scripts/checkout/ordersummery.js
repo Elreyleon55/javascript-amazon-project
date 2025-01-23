@@ -11,6 +11,7 @@ import {
   deliveryOptions,
   getDeliveryOption,
 } from "../../data/deliveryoptions.js";
+import { renderPaymentSummery } from "./paymentsummery.js";
 
 console.log(dayjs());
 
@@ -88,6 +89,7 @@ export function renderOrderSummery() {
       );
       container.remove();
       saveToStorage();
+      renderPaymentSummery();
     });
   });
 
@@ -128,6 +130,7 @@ export function renderOrderSummery() {
       const { productId, deliveryOptionId } = element.dataset;
       updateDeliveryOption(productId, deliveryOptionId);
       renderOrderSummery();
+      renderPaymentSummery();
     });
   });
 }
